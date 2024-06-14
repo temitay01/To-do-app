@@ -1,7 +1,11 @@
-function display({tasks}){
+  import Button from "./Button"
+  
+  
+  function display({tasks,onDelete}){
+
     
     return(
-        <div className='display-area'><ul className='the-list'>{tasks.map((task,index)=>(<li key={index}>{task  }</li>))}</ul></div>
+        <ul className='the-list'>{tasks.map((task,index)=>(<li key={index} ><span>{task}</span><Button name="delete" handleClick={() => onDelete(index)} /></li>))}</ul>
     )
 }
 

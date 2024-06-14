@@ -2,9 +2,10 @@
 import { useState } from 'react';
 import '../App.css';
 import Head from "./Head"
-import Appinput from "./Appinput"
-import Appbutton from './Appbutton'
+import  Form from './Form'
 import Display from './Display'
+import Footer from './Footer'
+
 
 
 function List(){
@@ -15,7 +16,7 @@ function List(){
   setinput(event.target.value)
  }
 
- const handleClick =()=>{
+ const handleClick =(e)=>{
 if(input.length < 1){
   alert("Add a task")
 }
@@ -23,15 +24,23 @@ else{
 settasks([...tasks,input])
 setinput('')
 }
-
-
  }
+ const handleDelete = (index) =>{
+  const newTasks = tasks.filter((_, i) => i !== index);
+    settasks(newTasks);
+}
+
+const handleClear = ()=>{
+  settasks([])
+  console.log('what')
+}
+
   return(
-      <div>
+      <div className='display-area'>
         <Head />
-  <Appinput value= {input} onChange ={handleChange} />
-          <Appbutton onClick ={handleClick}  />
-    <Display tasks={tasks} />
+  <Form value= {input} onChange ={handleChange} onClick={handleClick}  />  
+    <Display tasks={tasks}  onDelete={handleDelete} />
+    <Footer tasks={tasks}  handleClear ={handleClear}/>
       </div>
     )
 

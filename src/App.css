@@ -1,8 +1,10 @@
 
 /* App.css */
+
+/* Global styles */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background: linear-gradient(to right,rgb(107, 107, 214),rgb(188, 106, 23));
   margin: 0;
   padding: 0;
   display: flex;
@@ -11,49 +13,110 @@ body {
   height: 100vh;
 }
 
-.App-header {
-  font-size: 2em;
-  color: #333;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.display-area {
-  background: #fff;
+.container {
+  width: 80%;
+  max-width: 600px;
+  background-color: #fff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Header */
+.App-header {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form */
+.input-form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.input-form input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.input-form button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.input-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Display */
 .the-list {
   list-style-type: none;
   padding: 0;
 }
 
 .the-list li {
-  background: #e0e0e0;
-  margin: 5px 0;
   padding: 10px;
+  margin-bottom: 5px;
+  background-color: rgba(177, 172, 172, 0.886);
+  border: 1px solid #e6e6e6;
   border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-input {
-  padding: 10px;
-  margin-right: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  width: calc(100% - 82px); /* Adjust input width considering button width and margins */
-}
-
-.btn {
-  padding: 10px 20px;
-  background-color: #28a745;
-  color: white;
+.the-list li button {
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  background-color: #dc3545;
+  color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  
+ 
 }
 
-.btn:hover {
-  background-color: #218838;
+.the-list li button:hover {
+  background-color: #c82333;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.footer .btn{
+margin-left: 30px;
+background-color: rgb(123, 62, 123);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  .input-form {
+    flex-direction: column;
+  }
+
+  .input-form input {
+    margin-bottom: 10px;
+  }
 }
