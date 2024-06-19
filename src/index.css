@@ -1,13 +1,122 @@
+
 body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, rgb(107, 107, 214), rgb(188, 106, 23));
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  width: 80%;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.app-header {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+
+.input-form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.input-form input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.input-form button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.input-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Display */
+.the-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.the-list li {
+  padding: 10px;
+  margin-bottom: 5px;
+  background-color: rgba(177, 172, 172, 0.886);
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.the-list li button {
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.the-list li button:hover {
+  background-color: #c82333;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.footer .btn {
+  margin-left: 30px;
+  background-color: rgb(123, 62, 123);
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  .input-form {
+    flex-direction: column;
+  }
+
+  .input-form input {
+    margin-bottom: 10px;
+  }
 }

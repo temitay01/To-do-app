@@ -1,6 +1,5 @@
+function Counter() {
+  return <h1 className="app-header">ToDo App</h1>;
+}
 
-function Counter(){
-
-   return( <h1 className='App-header'>ToDo App</h1>)}
-
-   export default Counter
+export default Counter;

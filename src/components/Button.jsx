@@ -1,9 +1,9 @@
-
-function Button({handleClick,name}){
-
-    return (
-    <button className="btn" onClick={handleClick}>{name}</button>
-   )
+function Button({ handleClick, name }) {
+  return (
+    <button className="btn" onClick={handleClick}>
+      {name}
+    </button>
+  );
 }
 
-export default Button
+export default Button;
